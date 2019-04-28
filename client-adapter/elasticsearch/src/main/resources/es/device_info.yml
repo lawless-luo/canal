@@ -1,0 +1,10 @@
+dataSourceKey: defaultDS
+destination: example
+groupId: g1
+esMapping:
+  _index: device_info
+  _type: _doc
+  _id: _id
+  upsert: true
+  sql: "SELECT t.id AS _id, t.product_id AS productId, t.id AS deviceId, t.device_name AS deviceName, t.device_type AS deviceType, t.create_at AS createAt FROM device_info t"
+  commitBatch: 3000
