@@ -1,6 +1,6 @@
 canal:
   manager:
     jdbc:
-      url: jdbc:mysql://192.168.1.158:3306/lawless?useUnicode=true&characterEncoding=UTF-8
+      url: jdbc:mysql://lawless.vm.in:3306/lawless?useUnicode=true&characterEncoding=UTF-8
       username: canal
       password: canal

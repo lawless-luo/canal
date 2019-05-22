@@ -11,8 +11,8 @@ spring:
 
 canal.conf:
   mode: tcp # kafka rocketMQ
-  canalServerHost: 192.168.1.158:11111
-  zookeeperHosts: 192.168.1.158:2181
+  canalServerHost: lawless.vm.in:11111
+  zookeeperHosts: lawless.vm.in:2181
   flatMessage: true
   batchSize: 1
   syncBatchSize: 1
@@ -22,7 +22,7 @@ canal.conf:
   secretKey:
   srcDataSources:
     defaultDS:
-      url: jdbc:mysql://192.168.1.158:3306/lawless?useUnicode=true
+      url: jdbc:mysql://lawless.vm.in:3306/lawless?useUnicode=true
       username: canal
       password: canal
   canalAdapters:
@@ -32,6 +32,6 @@ canal.conf:
       outerAdapters:
       - name: logger
       - name: es
-        hosts: 192.168.1.158:39200,192.168.1.158:9300
+        hosts: lawless.vm.in:39200,lawless.vm.in:9300
         properties:
           cluster.name: my-es-01

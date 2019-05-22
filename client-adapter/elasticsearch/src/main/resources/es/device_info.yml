@@ -6,5 +6,6 @@ esMapping:
   _type: _doc
   _id: _id
   upsert: true
-  sql: "SELECT t.id AS _id, t.product_id AS productId, t.id AS deviceId, t.device_name AS deviceName, t.device_type AS deviceType, t.create_at AS createAt FROM device_info t"
+  sql: "SELECT t.id AS _id, t.product_id AS productId, t.id AS deviceId, t.device_name AS deviceName, t.device_type AS deviceType, t.sn as sn, t.device_key as deviceKey, t.descr as descr, t.tag as tag, t.create_at AS createAt FROM device_info t"
+  etlCondition: "where t.create_at>={}"
   commitBatch: 3000
